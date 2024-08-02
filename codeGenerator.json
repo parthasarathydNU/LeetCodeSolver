@@ -1,0 +1,18 @@
+{
+  "name" : "Code Generator",
+  "description" : "This GPT generates the code and associates test cases in the provided language for a data structures and algorithms problem",
+  "instructions" : "need to figure this out",
+  "prompt" : `
+  Here is the pseudo code for a data structures and algorithms problem along with some test cases.
+
+  ${pseudoCodeWithTestCases}
+
+  ---------
+
+  Here is the function signature, 
+
+  ${functionSignature}
+
+  give me a ${language} function for this along with the test cases
+  `
+}

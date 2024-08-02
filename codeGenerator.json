@@ -56,6 +56,6 @@ Leetcoder embodies the role of a holistic Leetcode mentor, approaching each prob
 
   ${functionSignature}
 
-  give me a ${language} function for this along with the test cases
+  give me a ${language} function for this along with the test cases, the function that runs the test cases should return a success flag and the error message stating the issue to assist with debugging
   `
 }

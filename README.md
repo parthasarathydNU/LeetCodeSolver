@@ -10,7 +10,26 @@ The **DSA Problem Solver** project aims to simplify the process of solving Data 
 Open to suggestions:
 
 
-[![](https://mermaid.ink/img/pako:eNplUk1v2zAM_SuEzo2Bbms75DBgjdO0Pa4DdpB7kG3aFqIPg5LWFEX_-xRaQYPOJz-R75F85JvofI9iLUZS8wS_68ZB_n7KS1VBjYN2CHFCmMm3Bi0o1zNWc35R3fS85N_Ky7aCJ1TUTRzXLiI5jDB4gqCtNopOIqGQNvJLBRtv21ORsPAJQzIxwIuOE4zokFTE_nPJWn6tYJcrRAwROhUwwEDeslIKSCVvK79V8Id0LIMETL2H49Tc29lwhXAnr47CS1mOc7Iy3o1LTx8VC2UnryvYHrBL5wztIGS_Wn8AdH81eWfRxaMbyaios1rUFsFkd_K07Oxn4Xt5ky2asNtzs4PSJhHCCvK6Wq6ERDlgMQQ1IosQrk6mQfAmRe0dRA-DPnwwiv6D_IWRXhfjQsQZrkvkUX6vIAcTOXjxtD-2y1OxA8qYc98774LukbDP7HJBsFr9gNtyHgw2Ze0MyqHVDLZlVQzuyhoY7IrBDO6LKQweygT_pz02TlwIi2SV7vNpvx2DjcizW2zEOv_2ivaNaNx7zlMp-qdX14l1pIQXgnwapxNIc59trLXKftvl8f0fKOwHKg?type=png)](https://mermaid.live/edit#pako:eNplUk1v2zAM_SuEzo2Bbms75DBgjdO0Pa4DdpB7kG3aFqIPg5LWFEX_-xRaQYPOJz-R75F85JvofI9iLUZS8wS_68ZB_n7KS1VBjYN2CHFCmMm3Bi0o1zNWc35R3fS85N_Ky7aCJ1TUTRzXLiI5jDB4gqCtNopOIqGQNvJLBRtv21ORsPAJQzIxwIuOE4zokFTE_nPJWn6tYJcrRAwROhUwwEDeslIKSCVvK79V8Id0LIMETL2H49Tc29lwhXAnr47CS1mOc7Iy3o1LTx8VC2UnryvYHrBL5wztIGS_Wn8AdH81eWfRxaMbyaios1rUFsFkd_K07Oxn4Xt5ky2asNtzs4PSJhHCCvK6Wq6ERDlgMQQ1IosQrk6mQfAmRe0dRA-DPnwwiv6D_IWRXhfjQsQZrkvkUX6vIAcTOXjxtD-2y1OxA8qYc98774LukbDP7HJBsFr9gNtyHgw2Ze0MyqHVDLZlVQzuyhoY7IrBDO6LKQweygT_pz02TlwIi2SV7vNpvx2DjcizW2zEOv_2ivaNaNx7zlMp-qdX14l1pIQXgnwapxNIc59trLXKftvl8f0fKOwHKg)
+```mermaid
+flowchart TD
+    A[Start] --> B[Generate problem approach]
+    B --> C[Generate pseudo code]
+    C --> D[Generate Python code]
+    D --> E[Initialize variables]
+    E --> F{Tries <= 5 and\nnot solved?}
+    F -->|Yes| G[Attempt to execute code]
+    G --> H{Execution successful\nand all tests passed?}
+    H -->|No| I[Handle Failure]
+    I --> J[Update Python code]
+    J --> F
+    H -->|Yes| K[Mark as solved]
+    K --> F
+    F -->|No| L[Return results]
+    L --> M[End]
+
+    style F decision
+    style H decision
+```
 
 ## Features
 

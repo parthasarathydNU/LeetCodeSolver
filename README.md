@@ -34,9 +34,9 @@ flowchart TD
 ```mermaid
 flowchart TD
     A[Start handleFailure] --> C[Trying to correct the code]
-    C --> D[Get code corrector prompts]
+    C --> D[Get code corrector prompts with test case failure and error messages]
     D --> E[Initialize LLM with OpenAI GPT-4]
-    E --> F[Generate corrected code  with test cases using LLM]
+    E --> F[Generate corrected code with test cases using LLM]
     F --> G[Extract and process corrected code with tests]
     G --> I[Return corrected code]
     I --> J[Return corrected code]

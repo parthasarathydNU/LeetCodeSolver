@@ -14,7 +14,7 @@ Open to suggestions:
 flowchart TD
     A[Start] --> B[Generate problem approach]
     B --> C[Generate pseudo code]
-    C --> D[Generate Python code]
+    C --> D[Generate Python code with test cases]
     D --> E[Initialize variables]
     E --> F{Tries <= 5 and\nnot solved?}
     F -->|Yes| G[Attempt to execute code]
@@ -29,6 +29,18 @@ flowchart TD
 
     style F decision
     style H decision
+```
+
+```mermaid
+flowchart TD
+    A[Start handleFailure] --> C[Trying to correct the code]
+    C --> D[Get code corrector prompts]
+    D --> E[Initialize LLM with OpenAI GPT-4]
+    E --> F[Generate corrected code  with test cases using LLM]
+    F --> G[Extract and process corrected code with tests]
+    G --> I[Return corrected code]
+    I --> J[Return corrected code]
+    J --> K[End handleFailure]
 ```
 
 ## Features
